@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SignupForm from "./Forms/SignupForm";
+import SignupForm from "../Forms/SignupForm";
 // *react-router imports
 import {
   useHistory,
