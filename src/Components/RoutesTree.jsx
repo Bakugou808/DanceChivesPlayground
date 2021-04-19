@@ -8,6 +8,7 @@ import Header from "./SharedComponents/Header";
 import ResultsPage from "./Results/ResultsPage";
 import AboutPage from "./About/About";
 import ContactPage from "./Contact/Contact";
+import DanceStyles from "./DanceStyles/DanceStyles";
 
 const RoutesTree = () => {
   return (
@@ -24,6 +25,9 @@ const RoutesTree = () => {
         </Route>
         <Route path="/contact">
           <ContactPage />
+        </Route>
+        <Route path="/styles">
+          <DanceStyles />
         </Route>
 
         <Route path="/">
