@@ -1,13 +1,15 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
-// *component imports
+// * Component Imports
 import Home from "./Components/Home";
 import Signup from "./Components/Signup";
+import Header from "./Components/Header";
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <Switch>
         <Route path="/signup">
           <Signup />
