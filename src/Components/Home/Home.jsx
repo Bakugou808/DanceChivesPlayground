@@ -8,12 +8,11 @@ const Home = (props) => {
 
   return (
     <div className="home-cont">
-      <div className="home-search">
-        <div className="home-title">
-          <p>Dance Chives</p>
-          <p>"Dance is the Hidden Language of the Soul"</p>
-        </div>
+      <div className="home-title">
+        <p>Dance Chives</p>
+        <p>"Dance is the Hidden Language of the Soul"</p>
       </div>
+      <div className="home-search"> I will contain a search component</div>
       <div className="video-feed">{renderVideos()}</div>
     </div>
   );
