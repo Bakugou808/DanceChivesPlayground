@@ -47,31 +47,25 @@ const NavBar = () => {
         <div className="dropdown-menu" id="dropdown-menu2" role="menu">
           <div className="dropdown-content">
             <div className="dropdown-item">
-              <p>Hip-Hop</p>
+              <p onClick={() => handleRedirect("styles/hip-hop")}>Hip-Hop</p>
             </div>
-            {/* <hr className="dropdown-divider"> */}
             <div className="dropdown-item">
-              <p>Breaking</p>
+              <p onClick={() => handleRedirect("styles/breaking")}>Breaking</p>
             </div>
-            {/* <hr className="dropdown-divider"> */}
             <div className="dropdown-item">
-              <p>Popping</p>
+              <p onClick={() => handleRedirect("styles/popping")}>Popping</p>
             </div>
-            {/* <hr className="dropdown-divider"> */}
             <div className="dropdown-item">
-              <p>House</p>
+              <p onClick={() => handleRedirect("styles/house")}>House</p>
             </div>
-            {/* <hr className="dropdown-divider"> */}
             <div className="dropdown-item">
-              <p>Waacking</p>
+              <p onClick={() => handleRedirect("styles/waacking")}>Waacking</p>
             </div>
-            {/* <hr className="dropdown-divider"> */}
             <div className="dropdown-item">
-              <p>Locking</p>
+              <p onClick={() => handleRedirect("styles/locking")}>Locking</p>
             </div>
-            {/* <hr className="dropdown-divider"> */}
             <div className="dropdown-item">
-              <p>Vogueing</p>
+              <p onClick={() => handleRedirect("styles/vogueing")}>Vogue-ing</p>
             </div>
           </div>
         </div>
@@ -93,22 +87,24 @@ const NavBar = () => {
         <div className="dropdown-menu" id="dropdown-menu2" role="menu">
           <div className="dropdown-content">
             <div className="dropdown-item">
-              <p>Find Events</p>
+              <p onClick={() => handleRedirect("/find_events")}>Find Events</p>
             </div>
-            {/* <hr className="dropdown-divider"> */}
             <div className="dropdown-item">
-              <p>Recent Events</p>
+              <p onClick={() => handleRedirect("/recent_events")}>
+                Recent Events
+              </p>
             </div>
-            {/* <hr className="dropdown-divider"> */}
             <div className="dropdown-item">
-              <p>Submit Event Info</p>
+              <p onClick={() => handleRedirect("/submit_event_info")}>
+                Submit Event Info
+              </p>
             </div>
           </div>
         </div>
       </div>
       <p onClick={() => handleRedirect("home")}>Home</p>
       <p onClick={() => handleRedirect("styles")}>Styles</p>
-      <p onClick={() => handleRedirect("events")}>Events</p>
+      <p onClick={() => handleRedirect("")}>Events</p>
       <SearchBar />
     </div>
   );
