@@ -49,11 +49,7 @@ const NavBar = () => {
         <div className="dropdown-menu" id="dropdown-menu2" role="menu">
           <div className="dropdown-content">
             <li className="dropdown-item">
-              <Link
-                to={(location) => ({ ...location, pathname: "styles/hip-hop" })}
-              >
-                Hip-Hop
-              </Link>
+              <Link to={"hip-hop"}>Hip-Hop</Link>
             </li>
             <li className="dropdown-item">
               <Link to={"/breaking"} replace>
