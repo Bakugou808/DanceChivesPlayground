@@ -32,30 +32,30 @@ const RoutesTree = () => {
         <Route path="/contact">
           <ContactPage />
         </Route>
-        <Route exact path="/styles">
+        <Route path="/styles">
           <DanceStyles />
         </Route>
 
         {/* nested styles routes */}
-        <Route path={`styles/hip-hop`}>
+        <Route path={`/hip-hop`}>
           <HipHopInfo />
         </Route>
-        <Route path={`styles/breaking`}>
+        <Route path={`/breaking`}>
           <BreakingInfo />
         </Route>
-        <Route path={`styles/popping`}>
+        <Route path={`/popping`}>
           <PoppingInfo />
         </Route>
-        <Route path={`styles/house`}>
+        <Route path={`/house`}>
           <HouseInfo />
         </Route>
-        <Route path={`styles/waacking`}>
+        <Route path={`/waacking`}>
           <WaackingInfo />
         </Route>
-        <Route path={`styles/vogueing`}>
+        <Route path={`/vogueing`}>
           <VogueingInfo />
         </Route>
-        <Route path={`styles/locking`}>
+        <Route path={`/locking`}>
           <LockingInfo />
         </Route>
 

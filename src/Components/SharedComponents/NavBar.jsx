@@ -7,6 +7,7 @@ import SearchBar from "./SearchBar";
 import {
   useHistory,
   Link,
+
   // useLocation,
   // useParams,
   // useRouteMatch,
@@ -48,37 +49,39 @@ const NavBar = () => {
         <div className="dropdown-menu" id="dropdown-menu2" role="menu">
           <div className="dropdown-content">
             <li className="dropdown-item">
-              <Link to={"styles/hip-hop"} replace="true">
+              <Link
+                to={(location) => ({ ...location, pathname: "styles/hip-hop" })}
+              >
                 Hip-Hop
               </Link>
             </li>
             <li className="dropdown-item">
-              <Link to={"styles/breaking"} replace="true">
+              <Link to={"/breaking"} replace>
                 Breaking
               </Link>
             </li>
             <li className="dropdown-item">
-              <Link to={"styles/popping"} replace="true">
+              <Link to={"/popping"} replace>
                 Popping
               </Link>
             </li>
             <li className="dropdown-item">
-              <Link to={"styles/house"} replace="true">
+              <Link to={"/house"} replace>
                 House
               </Link>
             </li>
             <li className="dropdown-item">
-              <Link to={"styles/waacking"} replace="true">
+              <Link to={"/waacking"} replace>
                 Waacking
               </Link>
             </li>
             <li className="dropdown-item">
-              <Link to={"styles/locking"} replace="true">
+              <Link to={"/locking"} replace>
                 Locking
               </Link>
             </li>
             <li className="dropdown-item">
-              <Link to={"styles/vogueing"} replace="true">
+              <Link to={"/vogueing"} replace>
                 Vogue-ing
               </Link>
             </li>
