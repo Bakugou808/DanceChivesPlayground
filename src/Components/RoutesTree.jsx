@@ -9,7 +9,13 @@ import ResultsPage from "./Results/ResultsPage";
 import AboutPage from "./About/About";
 import ContactPage from "./Contact/Contact";
 import DanceStyles from "./DanceStyles/DanceStyles";
-
+import BreakingInfo from "./DanceStyles/BreakingInfo";
+import HipHopInfo from "./DanceStyles/HipHopInfo";
+import HouseInfo from "./DanceStyles/HouseInfo";
+import LockingInfo from "./DanceStyles/LockingInfo";
+import PoppingInfo from "./DanceStyles/PoppingInfo";
+import VogueingInfo from "./DanceStyles/VogueingInfo";
+import WaackingInfo from "./DanceStyles/WaackingInfo";
 const RoutesTree = () => {
   return (
     <div>
@@ -26,8 +32,31 @@ const RoutesTree = () => {
         <Route path="/contact">
           <ContactPage />
         </Route>
-        <Route path="/styles">
+        <Route exact path="/styles">
           <DanceStyles />
+        </Route>
+
+        {/* nested styles routes */}
+        <Route path={`styles/hip-hop`}>
+          <HipHopInfo />
+        </Route>
+        <Route path={`styles/breaking`}>
+          <BreakingInfo />
+        </Route>
+        <Route path={`styles/popping`}>
+          <PoppingInfo />
+        </Route>
+        <Route path={`styles/house`}>
+          <HouseInfo />
+        </Route>
+        <Route path={`styles/waacking`}>
+          <WaackingInfo />
+        </Route>
+        <Route path={`styles/vogueing`}>
+          <VogueingInfo />
+        </Route>
+        <Route path={`styles/locking`}>
+          <LockingInfo />
         </Route>
 
         <Route path="/">

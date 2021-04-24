@@ -22,29 +22,29 @@ const DanceStyles = () => {
       <h2>Styles</h2>
       <ul>
         <li>
-          <Link to={`${url}/hip-hop`}>Hip-Hop</Link>
+          <Link to={`styles/hip-hop`}>Hip-Hop</Link>
         </li>
         <li>
-          <Link to={`${url}/breaking`}>Breaking</Link>
+          <Link to={`styles/breaking`}>Breaking</Link>
         </li>
         <li>
-          <Link to={`${url}/popping`}>Popping</Link>
+          <Link to={`styles/popping`}>Popping</Link>
         </li>
         <li>
-          <Link to={`${url}/house`}>House</Link>
+          <Link to={`styles/house`}>House</Link>
         </li>
         <li>
-          <Link to={`${url}/waacking`}>Waacking</Link>
+          <Link to={`styles/waacking`}>Waacking</Link>
         </li>
         <li>
-          <Link to={`${url}/vogueing`}>Vogueing</Link>
+          <Link to={`styles/vogueing`}>Vogueing</Link>
         </li>
         <li>
-          <Link to={`${url}/locking`}>Locking</Link>
+          <Link to={`styles/locking`}>Locking</Link>
         </li>
       </ul>
       {/* switch component for nested routes */}
-      <Switch>
+      {/* <Switch>
         <Route exact path={path}>
           <div>I am the styles of Dance Choose One! </div>
         </Route>
@@ -69,7 +69,7 @@ const DanceStyles = () => {
         <Route path={`${path}/locking`}>
           <LockingInfo />
         </Route>
-      </Switch>
+      </Switch> */}
     </div>
   );
 };

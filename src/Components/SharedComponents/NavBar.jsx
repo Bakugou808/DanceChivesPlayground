@@ -6,6 +6,7 @@ import SearchBar from "./SearchBar";
 // *react-router imports
 import {
   useHistory,
+  Link,
   // useLocation,
   // useParams,
   // useRouteMatch,
@@ -46,27 +47,41 @@ const NavBar = () => {
         </div>
         <div className="dropdown-menu" id="dropdown-menu2" role="menu">
           <div className="dropdown-content">
-            <div className="dropdown-item">
-              <p onClick={() => handleRedirect("styles/hip-hop")}>Hip-Hop</p>
-            </div>
-            <div className="dropdown-item">
-              <p onClick={() => handleRedirect("styles/breaking")}>Breaking</p>
-            </div>
-            <div className="dropdown-item">
-              <p onClick={() => handleRedirect("styles/popping")}>Popping</p>
-            </div>
-            <div className="dropdown-item">
-              <p onClick={() => handleRedirect("styles/house")}>House</p>
-            </div>
-            <div className="dropdown-item">
-              <p onClick={() => handleRedirect("styles/waacking")}>Waacking</p>
-            </div>
-            <div className="dropdown-item">
-              <p onClick={() => handleRedirect("styles/locking")}>Locking</p>
-            </div>
-            <div className="dropdown-item">
-              <p onClick={() => handleRedirect("styles/vogueing")}>Vogue-ing</p>
-            </div>
+            <li className="dropdown-item">
+              <Link to={"styles/hip-hop"} replace="true">
+                Hip-Hop
+              </Link>
+            </li>
+            <li className="dropdown-item">
+              <Link to={"styles/breaking"} replace="true">
+                Breaking
+              </Link>
+            </li>
+            <li className="dropdown-item">
+              <Link to={"styles/popping"} replace="true">
+                Popping
+              </Link>
+            </li>
+            <li className="dropdown-item">
+              <Link to={"styles/house"} replace="true">
+                House
+              </Link>
+            </li>
+            <li className="dropdown-item">
+              <Link to={"styles/waacking"} replace="true">
+                Waacking
+              </Link>
+            </li>
+            <li className="dropdown-item">
+              <Link to={"styles/locking"} replace="true">
+                Locking
+              </Link>
+            </li>
+            <li className="dropdown-item">
+              <Link to={"styles/vogueing"} replace="true">
+                Vogue-ing
+              </Link>
+            </li>
           </div>
         </div>
       </div>
@@ -87,24 +102,20 @@ const NavBar = () => {
         <div className="dropdown-menu" id="dropdown-menu2" role="menu">
           <div className="dropdown-content">
             <div className="dropdown-item">
-              <p onClick={() => handleRedirect("/find_events")}>Find Events</p>
+              <Link to={"/find_events"}>Find Events</Link>
             </div>
             <div className="dropdown-item">
-              <p onClick={() => handleRedirect("/recent_events")}>
-                Recent Events
-              </p>
+              <Link to={"/recent_events"}>Recent Events</Link>
             </div>
             <div className="dropdown-item">
-              <p onClick={() => handleRedirect("/submit_event_info")}>
-                Submit Event Info
-              </p>
+              <Link to={"/submit_event_info"}>Submit Event Info</Link>
             </div>
           </div>
         </div>
       </div>
-      <p onClick={() => handleRedirect("home")}>Home</p>
-      <p onClick={() => handleRedirect("styles")}>Styles</p>
-      <p onClick={() => handleRedirect("")}>Events</p>
+      <Link to={"/"}>Home</Link>
+      <Link to={"/styles"}>Styles</Link>
+      <Link to={"/events"}>Events</Link>
       <SearchBar />
     </div>
   );
