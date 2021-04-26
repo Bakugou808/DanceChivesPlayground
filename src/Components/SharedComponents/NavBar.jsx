@@ -15,6 +15,20 @@ import {
 import DanceStyles from "../DanceStyles/DanceStyles";
 
 const NavBar = () => {
+  // signOut = () => {
+  //   firebase
+  //     .auth()
+  //     .signOut()
+  //     .then(() => {
+  //       // Sign-out successful.
+  //       console.log("You are now signed out.");
+  //       history.push("/");
+  //     })
+  //     .catch((error) => {
+  //       // An error happened.
+  //     });
+  // };
+
   let history = useHistory();
   const [toggleStyles, setStylesToggle] = useState(false);
   const [toggleEvents, setEventsToggle] = useState(false);
