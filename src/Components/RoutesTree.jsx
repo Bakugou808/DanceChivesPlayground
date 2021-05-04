@@ -47,3 +47,25 @@ const RoutesTree = () => {
 };
 
 export default RoutesTree;
+
+// <Route path={`/hip-hop`}>
+// <HipHopInfo />
+// </Route>
+// <Route path={`/breaking`}>
+// <BreakingInfo />
+// </Route>
+// <Route path={`/popping`}>
+// <PoppingInfo />
+// </Route>
+// <Route path={`/house`}>
+// <HouseInfo />
+// </Route>
+// <Route path={`/waacking`}>
+// <WaackingInfo />
+// </Route>
+// <Route path={`/vogueing`}>
+// <VogueingInfo />
+// </Route>
+// <Route path={`/locking`}>
+// <LockingInfo />
+// </Route>
