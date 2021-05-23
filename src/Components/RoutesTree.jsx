@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 // * Component Imports
 import Home from "./Home/Home";
 import Signup from "./Signup/Signup";
+import Login from "./Login/Login";
 import Header from "./SharedComponents/Header";
 import ResultsPage from "./Results/ResultsPage";
 import AboutPage from "./About/About";
@@ -23,6 +24,9 @@ const RoutesTree = () => {
       <Switch>
         <Route path="/signup">
           <Signup />
+        </Route>
+        <Route path="/login">
+          <Login />
         </Route>
         <Route path="/results">
           <ResultsPage />
