@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // * Component Imports
 import SearchBar from "./SearchBar";
 // * Utils Imports
@@ -13,21 +13,39 @@ import {
   // useRouteMatch,
 } from "react-router-dom";
 import DanceStyles from "../DanceStyles/DanceStyles";
+import firebase from "../../utils/firebase";
 
 const NavBar = () => {
-  // signOut = () => {
-  //   firebase
-  //     .auth()
-  //     .signOut()
-  //     .then(() => {
-  //       // Sign-out successful.
-  //       console.log("You are now signed out.");
-  //       history.push("/");
-  //     })
-  //     .catch((error) => {
-  //       // An error happened.
-  //     });
-  // };
+  const [loggedInUser, setLoggedInUser] = useState(null);
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        // User is signed in.
+        setLoggedInUser(user);
+      } else {
+        // No user is signed in.
+        console.log("No user is currently logged in");
+      }
+    });
+  });
+
+  const signOut = () => {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        // Sign-out successful.
+        console.log("You are now signed out.");
+        history.push("/");
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
+
+  const Login = () => {
+    history.push("/login");
+  };
 
   let history = useHistory();
   const [toggleStyles, setStylesToggle] = useState(false);
@@ -130,6 +148,11 @@ const NavBar = () => {
       <Link to={"/styles"}>Styles</Link>
       <Link to={"/events"}>Events</Link>
       <SearchBar />
+      {loggedInUser ? (
+        <button onClick={signOut}>Logout </button>
+      ) : (
+        <button onClick={Login}>Sign In</button>
+      )}
     </div>
   );
 };
