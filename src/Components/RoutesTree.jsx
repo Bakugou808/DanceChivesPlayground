@@ -66,7 +66,9 @@ const RoutesTree = () => {
         <Route path={`/find_events`}>
           <FindEvents />
         </Route>
-
+        <Route path={`/recent_events`}>
+          <RecentEvents />
+        </Route>
         <Route path="/">
           <Home />
         </Route>
