@@ -62,6 +62,11 @@ const RoutesTree = () => {
           <LockingInfo />
         </Route>
 
+        {/* event tab links */}
+        <Route path={`/find_events`}>
+          <FindEvents />
+        </Route>
+
         <Route path="/">
           <Home />
         </Route>
